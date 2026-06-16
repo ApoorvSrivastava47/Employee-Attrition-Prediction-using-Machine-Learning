@@ -359,3 +359,150 @@ Notebook/
 **Phase Status:** ⏳ In Progress
 
 The next step is to load the dataset into Google Colab and inspect its structure.
+
+
+
+# Phase 2 – Data Collection
+
+## Objective
+
+The objective of this phase is to collect a high-quality and reliable dataset for building an Employee Attrition Prediction Machine Learning model. The collected dataset should contain employee-related information and the corresponding attrition status, which will act as the target variable during model training.
+
+---
+
+# Dataset Source
+
+The dataset used for this project is the **IBM HR Analytics Employee Attrition & Performance Dataset**, downloaded from **Kaggle**.
+
+Dataset Link:
+https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
+
+---
+
+# Why This Dataset?
+
+This dataset is widely used for Employee Attrition Prediction projects because:
+
+* It is clean and well-structured.
+* It contains real HR-related employee attributes.
+* It includes both numerical and categorical features.
+* It has a clearly defined target variable (Attrition).
+* It is suitable for Classification Machine Learning problems.
+* It is commonly used in academic and industrial HR analytics projects.
+
+---
+
+# Dataset Description
+
+The dataset contains employee demographic information, job-related information, compensation details, work environment characteristics, and employee performance indicators.
+
+Each row represents one employee.
+
+Each column represents one employee attribute.
+
+---
+
+# Dataset Statistics
+
+| Property             | Value     |
+| -------------------- | --------- |
+| Number of Rows       | 1470      |
+| Number of Columns    | 35        |
+| Numerical Features   | Multiple  |
+| Categorical Features | Multiple  |
+| Target Variable      | Attrition |
+
+---
+
+# Target Variable
+
+**Column Name:** Attrition
+
+Possible Values:
+
+* Yes → Employee Left the Company
+* No → Employee Stayed in the Company
+
+This is the output variable that our machine learning model will predict.
+
+---
+
+# Machine Learning Problem Type
+
+This project is a **Binary Classification** problem because the target variable contains only two possible classes:
+
+* Yes
+* No
+
+---
+
+# Dataset Features
+
+Some important features include:
+
+* Age
+* BusinessTravel
+* DailyRate
+* Department
+* DistanceFromHome
+* Education
+* EducationField
+* EnvironmentSatisfaction
+* Gender
+* HourlyRate
+* JobInvolvement
+* JobLevel
+* JobRole
+* JobSatisfaction
+* MaritalStatus
+* MonthlyIncome
+* MonthlyRate
+* NumCompaniesWorked
+* OverTime
+* PercentSalaryHike
+* PerformanceRating
+* StockOptionLevel
+* TotalWorkingYears
+* TrainingTimesLastYear
+* WorkLifeBalance
+* YearsAtCompany
+* YearsInCurrentRole
+* YearsSinceLastPromotion
+* YearsWithCurrManager
+
+---
+
+# Folder Structure
+
+Employee_Attrition_Prediction/
+
+```
+Dataset/
+│
+└── WA_Fn-UseC_-HR-Employee-Attrition.csv
+```
+
+---
+
+# Expected Output
+
+At the end of this phase we should have:
+
+* Dataset successfully downloaded.
+* Dataset uploaded into Google Colab.
+* Dataset loaded using Pandas.
+* Dataset shape identified.
+* Feature names inspected.
+* Data types verified.
+* Basic dataset information explored.
+* Target variable distribution understood.
+
+---
+
+# Deliverables
+
+* Raw dataset stored inside the Dataset folder.
+* Dataset successfully loaded into the notebook.
+* Initial dataset exploration completed.
+* Ready for Data Preprocessing (Phase 3).
+
