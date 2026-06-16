@@ -506,3 +506,133 @@ At the end of this phase we should have:
 * Initial dataset exploration completed.
 * Ready for Data Preprocessing (Phase 3).
 
+
+
+
+# Phase 3 – Data Preprocessing
+
+## Objective
+
+The objective of this phase is to clean and transform the raw dataset into a format suitable for machine learning algorithms. Data preprocessing improves data quality, removes inconsistencies, and ensures that the dataset is ready for feature engineering and model building.
+
+---
+
+# Why Data Preprocessing?
+
+Real-world datasets often contain:
+
+* Missing values
+* Duplicate records
+* Incorrect or corrupted data
+* Outliers
+* Categorical variables
+* Features with different scales
+
+Machine learning models perform significantly better when the input data is clean and properly formatted.
+
+---
+
+# Data Cleaning Pipeline
+
+The preprocessing pipeline for this project consists of the following steps:
+
+1. Missing Value Detection
+2. Missing Value Treatment
+3. Duplicate Record Detection
+4. Duplicate Record Removal
+5. Corrupted Data Inspection
+6. Outlier Detection
+7. Outlier Treatment
+8. Categorical Feature Encoding
+9. Feature Scaling
+10. Save Processed Dataset
+
+---
+
+# Missing Values
+
+All columns will be checked for null or missing values using Pandas.
+
+If missing values exist, appropriate strategies such as deletion, mean/median imputation, or mode imputation will be applied depending on the feature type.
+
+---
+
+# Duplicate Records
+
+Duplicate employee records can negatively affect model learning.
+
+The dataset will be inspected for duplicate rows and duplicate records will be removed if found.
+
+---
+
+# Corrupted Data
+
+The dataset will be inspected for:
+
+* Incorrect data types
+* Invalid categorical values
+* Impossible numerical values
+* Empty strings
+* Formatting inconsistencies
+
+---
+
+# Outlier Detection
+
+Numerical columns will be analyzed for extreme values using:
+
+* Boxplots
+* Interquartile Range (IQR)
+
+Outliers will be treated only where appropriate to preserve meaningful business information.
+
+---
+
+# Encoding
+
+Machine learning algorithms require numerical input.
+
+Categorical features such as:
+
+* BusinessTravel
+* Department
+* Gender
+* JobRole
+* MaritalStatus
+* OverTime
+* Attrition
+
+will be converted into numerical values using suitable encoding techniques.
+
+---
+
+# Feature Scaling
+
+Numerical features will be standardized using StandardScaler.
+
+Scaling ensures that all numerical features contribute equally during model training.
+
+---
+
+# Output
+
+The final processed dataset will:
+
+* Contain no duplicate records
+* Contain no missing values
+* Have encoded categorical variables
+* Have scaled numerical features (where required)
+* Be ready for Exploratory Data Analysis (EDA) and Machine Learning.
+
+---
+
+# Deliverables
+
+At the end of this phase:
+
+* Clean dataset
+* Encoded dataset
+* Scaled dataset
+* Processed CSV saved inside the Dataset folder
+* Dataset ready for Phase 4 (EDA)
+
