@@ -201,4 +201,161 @@ Employee_Attrition_Prediction/
 
 **Phase Status:** ✅ Completed
 
-The next phase focuses on collecting and understanding the employee dataset that will be used to train the Machine Learning model.
+---
+
+
+# Phase 2: Data Collection
+
+## Employee Attrition Prediction using Machine Learning
+
+---
+
+# 1. Introduction
+
+After understanding the business problem, the next step is to collect a high-quality dataset that contains historical employee information. The quality of the dataset directly affects the performance and reliability of the Machine Learning model.
+
+A well-structured dataset enables the model to learn meaningful patterns that distinguish employees who leave the organization from those who stay.
+
+---
+
+# 2. Objective
+
+The objectives of this phase are:
+
+* Obtain a reliable employee attrition dataset.
+* Understand every feature available in the dataset.
+* Identify the target variable.
+* Verify dataset integrity.
+* Understand data types.
+* Prepare the dataset for preprocessing.
+
+---
+
+# 3. Dataset Source
+
+For this project, we will use the **IBM HR Analytics Employee Attrition & Performance Dataset**.
+
+This dataset is widely used in industry demonstrations, academic research, and Machine Learning projects because it contains realistic HR-related information.
+
+---
+
+# 4. Dataset Description
+
+The dataset contains historical information about employees including:
+
+* Personal Information
+* Educational Background
+* Job Information
+* Salary Information
+* Performance Metrics
+* Work-Life Balance
+* Job Satisfaction
+* Environment Satisfaction
+* Business Travel
+* Overtime
+* Years of Experience
+* Attrition Status
+
+Each row represents one employee.
+
+Each column represents one feature describing that employee.
+
+---
+
+# 5. Machine Learning Perspective
+
+Input Features (X):
+
+Employee-related attributes.
+
+Target Variable (Y):
+
+Attrition
+
+Possible Values:
+
+* Yes
+* No
+
+---
+
+# 6. Dataset Characteristics
+
+Dataset Type:
+
+Structured Tabular Dataset
+
+Learning Type:
+
+Supervised Learning
+
+Problem Type:
+
+Binary Classification
+
+Target Column:
+
+Attrition
+
+---
+
+# 7. Dataset Verification
+
+Before using the dataset, we will verify:
+
+* Number of rows
+* Number of columns
+* Feature names
+* Feature data types
+* Missing values
+* Target distribution
+
+This ensures that the dataset is complete and suitable for further processing.
+
+---
+
+# 8. Deliverables
+
+At the end of this phase, we should have:
+
+* Dataset successfully loaded.
+* Dataset dimensions identified.
+* Feature list extracted.
+* Data types understood.
+* Target variable confirmed.
+* Initial dataset inspection completed.
+
+---
+
+# 9. Folder Updates
+
+```text
+Employee_Attrition_Prediction/
+
+Dataset/
+    ├── raw/
+    │      employee_attrition.csv
+    │
+    ├── processed/
+    │
+    └── metadata/
+
+Notebook/
+    02_Data_Collection.ipynb
+```
+
+---
+
+# Phase 2 Deliverables
+
+* Dataset Collected
+* Dataset Loaded
+* Dataset Structure Understood
+* Target Variable Verified
+* Ready for Data Preprocessing
+
+---
+
+**Phase Status:** ⏳ In Progress
+
+The next step is to load the dataset into Google Colab and inspect its structure.
