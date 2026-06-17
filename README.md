@@ -636,3 +636,91 @@ At the end of this phase:
 * Processed CSV saved inside the Dataset folder
 * Dataset ready for Phase 4 (EDA)
 
+
+# Phase 4 – Exploratory Data Analysis (EDA)
+
+## Objective
+
+The objective of Exploratory Data Analysis (EDA) is to understand the dataset through statistical summaries and visualizations before building machine learning models. EDA helps identify trends, patterns, relationships, class imbalance, and potential issues in the data.
+
+---
+
+# Why Perform EDA?
+
+EDA is an essential step in the machine learning pipeline because it helps us:
+
+* Understand the distribution of data.
+* Detect skewness and unusual patterns.
+* Identify relationships between features.
+* Analyze the target variable.
+* Support feature engineering and model selection.
+* Generate business insights from employee data.
+
+---
+
+# Types of Analysis
+
+The following analyses will be performed:
+
+### 1. Univariate Analysis
+
+Study one feature at a time to understand its distribution.
+
+Examples:
+
+* Age Distribution
+* Monthly Income Distribution
+* Job Satisfaction Distribution
+
+---
+
+### 2. Bivariate Analysis
+
+Study the relationship between two variables.
+
+Examples:
+
+* Age vs Attrition
+* Monthly Income vs Attrition
+* Overtime vs Attrition
+* Job Role vs Attrition
+
+---
+
+### 3. Correlation Analysis
+
+Measure relationships among numerical variables using a correlation matrix and heatmap.
+
+---
+
+# Visualizations
+
+The following visualizations will be created:
+
+* Histograms
+* Boxplots
+* Count Plots
+* Scatter Plots
+* Pie Chart
+* Correlation Matrix
+* Heatmap
+
+---
+
+# Business Insights
+
+Each visualization will be followed by observations and business insights to explain what the graph reveals about employee attrition.
+
+---
+
+# Deliverables
+
+At the end of this phase:
+
+* Univariate Analysis completed.
+* Bivariate Analysis completed.
+* Correlation Analysis completed.
+* Visualizations generated.
+* Business insights documented.
+* Dataset ready for Feature Engineering.
+
