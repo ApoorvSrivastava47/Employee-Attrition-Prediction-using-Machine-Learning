@@ -724,3 +724,87 @@ At the end of this phase:
 * Business insights documented.
 * Dataset ready for Feature Engineering.
 
+Phase 1 : Data Understanding and Exploratory Data Analysis (EDA)
+
+Objective
+
+The purpose of this phase is to completely understand the Employee Attrition dataset before applying any preprocessing or machine learning algorithm.
+
+No modification to the dataset is performed in this phase.
+
+The goal is only to understand the data.
+
+Tasks Completed
+
+1. Imported Required Libraries
+
+Pandas
+
+NumPy
+
+Matplotlib
+
+2. Loaded Dataset
+
+Dataset successfully loaded.
+
+Shape of dataset verified.
+
+3. Initial Inspection
+
+Performed:
+
+head()
+
+tail()
+
+info()
+
+describe()
+
+4. Missing Value Analysis
+
+Checked missing values for every column.
+
+Verified dataset quality.
+
+5. Duplicate Analysis
+
+Checked duplicate rows.
+
+6. Target Variable Analysis
+
+Studied distribution of Attrition.
+
+Observed class imbalance.
+
+7. Numerical Feature Analysis
+
+Generated histograms for numerical variables.
+
+Observed distribution patterns.
+
+8. Categorical Feature Analysis
+
+Visualized every categorical feature using bar charts.
+
+Compared category frequencies.
+
+9. Correlation Analysis
+
+Generated correlation matrix.
+
+Observed feature relationships.
+
+Deliverables
+
+✔ Dataset fully understood
+
+✔ Class imbalance identified
+
+✔ Feature distributions understood
+
+✔ Numerical relationships analyzed
+
+✔ Ready for preprocessing
+
