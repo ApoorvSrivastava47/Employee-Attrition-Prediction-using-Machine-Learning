@@ -1,0 +1,121 @@
+# ==============================
+# CUSTOM CSS
+# ==============================
+
+st.markdown(
+    """
+<style>
+
+.main {
+    background-color: #0E1117;
+}
+
+.block-container {
+    padding-top: 2rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+}
+
+.subtitle {
+    text-align: center;
+    color: #B0B0B0;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
+# ==============================
+# HEADER
+# ==============================
+
+st.markdown(
+    """
+<div class="title">
+📊 Employee Attrition Prediction Dashboard
+</div>
+
+<div class="subtitle">
+MNNIT Prayagraj | Human Resource Analytics Platform
+</div>
+""",
+    unsafe_allow_html=True,
+)
+
+# ==============================
+# SIDEBAR
+# ==============================
+
+st.sidebar.success("✅ Model Loaded")
+
+page = st.sidebar.radio("Navigation", ["Prediction", "Analytics", "About Project"])
+
+# ==============================
+# DASHBOARD CARDS
+# ==============================
+
+c1, c2, c3, c4 = st.columns(4)
+
+with c1:
+    st.metric("Model", "Logistic Regression")
+
+with c2:
+    st.metric("Features", "47")
+
+with c3:
+    st.metric("Dataset", "IBM HR")
+
+with c4:
+    st.metric("Status", "Live")
+
+st.divider()
+
+# ==============================
+# EMPLOYEE INFORMATION
+# ==============================
+
+st.subheader("👨 Employee Information")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    age = st.slider("Employee Age", 18, 60, 35)
+
+with col2:
+    monthly_income = st.number_input(
+        "Monthly Income ($)", min_value=1000, value=5000, step=500
+    )
+
+with col3:
+    total_working_years = st.slider("Total Working Years", 0, 40, 10)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    overtime = st.selectbox("Overtime Status", ["Yes", "No"])
+
+with col2:
+    job_role = st.selectbox(
+        "Job Role",
+        [
+            "Sales Executive",
+            "Research Scientist",
+            "Laboratory Technician",
+            "Manufacturing Director",
+            "Healthcare Representative",
+            "Manager",
+            "Sales Representative",
+            "Research Director",
+            "Human Resources",
+        ],
+    )
+
+st.divider()
