@@ -1,7 +1,7 @@
+
+## "KYRON"-Workforce-Stability-Prediction-and-Organizational-Analytics-Engine
+
 # Phase 1: Problem Understanding
-
-## Employee Attrition Prediction using Machine Learning
-
 ---
 
 # 1. Introduction
