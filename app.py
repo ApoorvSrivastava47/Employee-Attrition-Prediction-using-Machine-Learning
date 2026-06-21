@@ -103,7 +103,7 @@ elif page == "About Project":
 
     **Model:** Logistic Regression
 
-    **Developer:** Apoorv Srivastava
+    **Developer:** Apoorv Srivastava 
 
     **Institute:** MNNIT Prayagraj
     """)
@@ -321,50 +321,66 @@ if job_role in job_map:
 
 input_df = pd.DataFrame([input_data])
 
+
 st.divider()
 
 predict = st.button("🚀 Predict Employee Attrition", use_container_width=True)
 
 if predict:
     try:
-        prediction = model.predict(input_df)
+        probabilities = model.predict_proba(input_df)[0]
+
+        stay_probability = probabilities[0] * 100
+        leave_probability = probabilities[1] * 100
+
+        prob = probabilities[1]
 
         st.subheader("📈 Prediction Result")
 
-        if hasattr(model, "predict_proba"):
-            probability = model.predict_proba(input_df)[0][1]
+        # Debug (optional)
+        st.write("Leave Probability =", f"{leave_probability:.2f}%")
 
-            if prediction[0] == 1:
-                st.markdown(
-                    """
-                    <div class="result-danger">
-                    ⚠️ HIGH ATTRITION RISK
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-                st.metric("Attrition Probability", f"{probability * 100:.2f}%")
-
-            else:
-                st.markdown(
-                    """
-                    <div class="result-success">
-                    ✅ EMPLOYEE LIKELY TO STAY
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-                st.metric("Retention Confidence", f"{(1 - probability) * 100:.2f}%")
-
-            st.progress(float(probability))
+        # Threshold Based Prediction
+        if prob >= 0.30:
+            st.markdown(
+                """
+                <div class="result-danger">
+                ⚠️ HIGH ATTRITION RISK
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
         else:
-            if prediction[0] == 1:
-                st.error("⚠️ Employee Likely To Leave")
-            else:
-                st.success("✅ Employee Likely To Stay")
+            st.markdown(
+                """
+                <div class="result-success">
+                ✅ EMPLOYEE LIKELY TO STAY
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.metric("Stay Probability", f"{stay_probability:.2f}%")
+
+        with col2:
+            st.metric("Leave Probability", f"{leave_probability:.2f}%")
+
+        confidence = max(stay_probability, leave_probability)
+
+        if confidence >= 80:
+            st.success("🟢 High Confidence Prediction")
+
+        elif confidence >= 60:
+            st.warning("🟡 Moderate Confidence Prediction")
+
+        else:
+            st.error("🔴 Low Confidence Prediction")
+
+        st.progress(confidence / 100)
 
     except Exception as e:
         st.error(f"Prediction Error: {e}")
